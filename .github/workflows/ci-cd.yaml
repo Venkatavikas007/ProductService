@@ -27,8 +27,8 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/productservice:latest .
-        docker push ${{ secrets.DOCKER_USERNAME }}/productservice:latest
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/ProductService:latest .
+        docker push ${{ secrets.DOCKER_USERNAME }}ProductService:latest
 
     - name: Deploy to Kubernetes
       run: |
