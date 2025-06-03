@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the jar (you must build this jar using Maven/Gradle)
-COPY target/ProductService-0.0.1-SNAPSHOT.jar app.jar
+COPY target/productservice-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the app port
 EXPOSE 8080

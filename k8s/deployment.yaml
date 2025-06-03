@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ProductService-deployment
+  name: productservice-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: ProductService
+      app: productservice
   template:
     metadata:
       labels:
-        app: ProductService
+        app: productservice
     spec:
       containers:
-      - name: ProductService
-        image: vikas079/ProductService:latest
+      - name: productservice
+        image: vikas079/productservice:latest
         ports:
         - containerPort: 8080
         env:
