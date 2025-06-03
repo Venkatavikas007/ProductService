@@ -32,6 +32,11 @@ jobs:
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/productservice:latest .
         docker push ${{ secrets.DOCKER_USERNAME }}/productservice:latest
+      # Configure kubeconfig
+    - name: Set up kubeconfig
+      run: |
+        mkdir -p $HOME/.kube
+        echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
 
     - name: Deploy to Kubernetes
       run: |
